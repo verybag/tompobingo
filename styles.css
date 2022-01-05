@@ -22,7 +22,7 @@ body {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 500px;
+  width: auto;
   font-family: 'Roboto', sans-serif;
   background: #444444;
 }
@@ -33,7 +33,8 @@ body {
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 10rem;
+  height: auto;
+  padding: 2rem;
   font-family: 'Roboto', sans-serif;
   border: 2px solid black;
 }
