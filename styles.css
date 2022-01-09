@@ -42,8 +42,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   padding: 2rem;
   font-family: 'Roboto', sans-serif;
   border: 2px solid var(--lightorange);
@@ -55,7 +55,8 @@ body {
 
 .quote {
   font-family: 'Roboto', sans-serif;
-  font-size: 24x;
+  font-size: 16px;
+  line-height: 95%;
   font-weight: 500;
 }
 

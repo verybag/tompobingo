@@ -7,7 +7,7 @@ const Quotes = [
   '"$200 headphones!"',
   '"BOT"',
   '"degen"',
-  '"SHEEEEEEEESH"',
+  '"SHEEEEEEESH"',
   '"retards"',
   '"brotheR"',
   '"where are my shots"',
