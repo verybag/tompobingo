@@ -1,17 +1,25 @@
 const cardGrid = document.getElementById('cardGrid');
 
 const Quotes = [
-  'fucking losers',
-  'no sound',
-  'controller player',
-  '$200 headphones',
-  'bot',
-  'degen',
-  'sheeeeeeeeeesh',
-  'retards',
-  'where are my shots',
+  '"Fucking LOSERS"',
+  '"Sound??"',
+  '"controller player"',
+  '"$200 headphones!"',
+  '"BOT"',
+  '"degen"',
+  '"SHEEEEEEEESH"',
+  '"retards"',
+  '"brotheR"',
+  '"where are my shots"',
+  '"fuck my ass!"',
+  '"please climb"',
+  `"i'm aping"`,
+  'Gets a beer',
+  'clutches a fight (last alive)',
+  'rezzes a teammate',
+  "Heero's mic deafens everybody in a fight",
 ];
-
+let board = [];
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -21,7 +29,18 @@ const shuffle = (array) => {
   return array;
 };
 
-console.log(Quotes);
+const randomArray = (array) => {
+  while (board.length < 9) {
+    let rand = array[Math.floor(Math.random() * array.length)];
+    if (board.includes(rand)) {
+      continue;
+    } else {
+      board.push(rand);
+    }
+  }
+  console.log(board);
+  return board;
+};
 
 const makeCard = (quote) => {
   const toggleSelected = () => {
@@ -45,15 +64,17 @@ const makeCard = (quote) => {
 };
 
 const clearGrid = () => {
+  board = [];
   cardGrid.innerHTML = '';
 };
 
 const makeGrid = () => {
   clearGrid();
-  const newQuotes = shuffle(Quotes);
+  const newQuotes = randomArray(Quotes);
   for (const quote of newQuotes) {
     makeCard(quote);
   }
 };
+
 const button = document.querySelector('.btn');
 button.addEventListener('click', makeGrid);
